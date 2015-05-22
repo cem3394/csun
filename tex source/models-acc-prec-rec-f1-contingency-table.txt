@@ -1,0 +1,23 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[h]
+\begin{tabular}{cccccc}
+                                                                         & Model              & Accuracy & Precision & Recall & F1 Score \\
+\multirow{4}{*}{Management}                                              & Logistic Full Set  & 0.91     & 0.82      & 0.89   & 0.91     \\
+                                                                         & Logistic 3 Courses & 0.70     & 0.50      & 0.31   & 0.68     \\
+                                                                         & KMeans Full Set    & 0.77     & 0.26      & 0.60   & 0.53     \\
+                                                                         & KMeans 3 Courses   & 0.66     & 0.25      & 0.62   & 0.46     \\
+\multirow{4}{*}{Economics}                                               & Logistic Full Set  & 0.87     & 0.84      & 0.84   & 0.87     \\
+                                                                         & Logistic 3 Courses & 0.64     & 0.56      & 0.42   & 0.62     \\
+                                                                         & KMeans Full Set    & 0.81     & 0.22      & 0.56   & 0.50     \\
+                                                                         & KMeans 3 Courses   & 0.68     & 0.28      & 0.25   & 0.53     \\
+\multirow{4}{*}{Marketing}                                               & Logistic Full Set  & 0.89     & 0.83      & 0.90   & 0.89     \\
+                                                                         & Logistic 3 Courses & 0.67     & 0.57      & 0.47   & 0.67     \\
+                                                                         & KMeans Full Set    & 0.77     & 0.29      & 0.40   & 0.51     \\
+                                                                         & KMeans 3 Courses   & 0.67     & 0.41      & 0.40   & 0.43     \\
+\multirow{4}{*}{\begin{tabular}[c]{@{}c@{}}Business \\ Law\end{tabular}} & Logistic Full Set  & 0.80     & 0.72      & 0.72   & 0.80     \\
+                                                                         & Logistic 3 Courses & 0.66     & 0.52      & 0.41   & 0.64     \\
+                                                                         & KMeans Full Set    & 0.74     & 0.30      & 0.42   & 0.39     \\
+                                                                         & KMeans 3 Courses   & 0.65     & 0.31      & 0.70   & 0.38    
+\end{tabular}
+\end{table}
