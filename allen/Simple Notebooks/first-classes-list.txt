@@ -1,0 +1,11 @@
+business law
+econ 160, econ 161, acct 220
+
+economics
+econ 160, econ 161, acct 220
+
+marketing
+econ160, acct230, acct220
+
+management
+econ 160, acct230, acct220
