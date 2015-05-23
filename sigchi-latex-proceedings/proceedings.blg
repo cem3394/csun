@@ -1,0 +1,80 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: proceedings.aux
+The style file: SIGCHI-Reference-Format.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: sample.bib
+Warning--no key, author in csun1
+Warning--no author, editor, organization, or key in csun1
+Warning--to sort, need author or key in csun1
+Warning--no key, author in csun2
+Warning--no author, editor, organization, or key in csun2
+Warning--to sort, need author or key in csun2
+Warning--no key, author in csun2
+Warning--no key, author in csun2
+Warning--no key, author in csun1
+Warning--empty author in csun2
+Warning--empty year in csun2
+Warning--empty booktitle in csun2
+Warning--empty publisher in csun2
+Warning--empty address in csun2
+Warning--page numbers missing in both pages and numpages fields in csun2
+Warning--empty author in csun1
+Warning--empty year in csun1
+Warning--empty booktitle in csun1
+Warning--empty publisher in csun1
+Warning--empty address in csun1
+Warning--page numbers missing in both pages and numpages fields in csun1
+Warning--empty publisher in al2006mining
+Warning--empty address in al2006mining
+Warning--page numbers missing in both pages and numpages fields in al2006mining
+Warning--empty address in duda2012pattern
+Warning--empty address in gordon1999classification
+Warning--no journal in luan2002data
+Warning--no number and no volume in luan2002data
+Warning--page numbers missing in both pages and numpages fields in luan2002data
+Warning--can't use both volume and number fields in macqueen1967some
+Warning--empty publisher in macqueen1967some
+Warning--empty address in macqueen1967some
+Warning--page numbers missing in both pages and numpages fields in tair2012mining
+You've used 13 entries,
+            5283 wiz_defined-function locations,
+            1294 strings with 16305 characters,
+and the built_in function-call counts, 12577 in all, are:
+= -- 1693
+> -- 332
+< -- 1
++ -- 105
+- -- 243
+* -- 811
+:= -- 1225
+add.period$ -- 60
+call.type$ -- 13
+change.case$ -- 81
+chr.to.int$ -- 12
+cite$ -- 51
+duplicate$ -- 983
+empty$ -- 707
+format.name$ -- 144
+if$ -- 3051
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 52
+newline$ -- 126
+num.names$ -- 66
+pop$ -- 486
+preamble$ -- 1
+purify$ -- 132
+quote$ -- 0
+skip$ -- 231
+stack$ -- 0
+substring$ -- 1238
+swap$ -- 73
+text.length$ -- 250
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 109
+warning$ -- 33
+while$ -- 72
+width$ -- 0
+write$ -- 194
+(There were 33 warnings)

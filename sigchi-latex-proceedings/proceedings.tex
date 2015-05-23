@@ -151,10 +151,11 @@ We obtained academic records containing grade information from declared majors i
 The grade data for each course were encoded with the following normalized GPA scale prior to statistical analysis: 
 
 \begin{table}[h]
+\scalebox{0.8}{
 \begin{tabular}{llllllllllll}
 A   & A-  & B+  & B   & B-  & C+  & C & C-   & D+   & D    & D-   & F \\
 2.0 & 1.7 & 1.3 & 1.0 & 0.7 & 0.3 & 0.0 & -0.3 & -0.7 & -1.0 & -1.3 &  -2.0
-\end{tabular}
+\end{tabular}}
 \caption{Grade encoding scheme}~\label{tab:gradeEncodingTable}
 \end{table}
 
@@ -178,6 +179,7 @@ We applied the same approach to the first three classes that students would norm
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
 \begin{table}[h]
+\scalebox{0.6}{
 \begin{tabular}{ccccccc}
                                                                          & Model & Accuracy & Precision & Recall & F1 Score & False Omission Rate\\
 \multirow{4}{*}{Management}                           & Logistic Full Set & 0.91 & 0.82 & 0.91 & 0.86 & 0.04
@@ -214,54 +216,27 @@ We applied the same approach to the first three classes that students would norm
      \\
                                                                          & KMeans 3 Courses & 0.73 & 0.58 & 0.96 & 0.72 & 0.04
     
-\end{tabular}
+\end{tabular}}
 \caption{Accuracy, Precision, Recall, F1 Scores, and the False Omission Rate}~\label{tab:scoresTable}
 
 \end{table}
 
 We expected that a predictive model trained on the full feature set of course grades would be more effective than a model using cluster labels from unsupervised clustering. To test this hypothesis, we compared the performance of a logistic regression classifier trained on the full feature set to the performance of a classifier that used co-membership information from the clusters on a classification task: to predict whether the student had in fact graduated with that major. The cluster-based classifier estimated the probability that a student belonged to a particular category using the fraction of co-clustered samples that also belonged to the category of interest.
 
-\begin{table}[h!]
- \begin{center}
-   \begin{tabular}{| c | c |}
-   \hline
-   \includegraphics[width=0.5\textwidth]{figures/ROC-Economics.png}
-   &
-   \includegraphics[width=0.5\textwidth]{figures/ROC-Business-Law.png}
-   \\
-   \hline
-   \includegraphics[width=0.5\textwidth]{figures/roc-marketing.png}
-	&   
-   \includegraphics[width=0.5\textwidth]{figures/roc-management.png}
-   \\
-   \hline
-   \end{tabular}
- \end{center}
- \caption{ROC plots for both classifiers on the full course set and the first three courses }~\label{tab:rocTable}
-\end{table}
-
-
-
 In each case we identified strongly predictive clusters. Though outperformed, the cluster-based classifiers compared surprisingly well with the logistic regression models (see \ref{tab:rocTable}). Heuristically speaking, students in the same cluster tended to drop out at the same times after getting the same grades in the same courses. 
 
-\section{DISCUSSION}
-
-
-Cluster analysis can also help to identify common traits among students within each cluster. For each department the second cluster spends on average four semesters enrolled with that major declared (\ref{tab:boxplotTable}). However the probability of these students graduating with the major is quite low (see \ref{tab:scoresTable}).
-Note that precision in this case is equal to a student’s probability of graduating given that they are in cluster 1, and the false omission rate is equal to a student’s probability of graduating given that they are in cluster 2.
-
-\begin{table}[h!]
+\begin{table}[ht]
  \begin{center}
-   \begin{tabular}{| c | c |}
+   \begin{tabular}{ c }
    \hline
-   \includegraphics[width=0.5\textwidth]{figures/box-Economics.png}
-   &
-   \includegraphics[width=0.5\textwidth]{figures/box-Business-Law.png}
+   \includegraphics[width=0.4\columnwidth]{figures/box-Economics.png}
+   \\
+   \includegraphics[width=0.4\columnwidth]{figures/box-Business-Law.png}
    \\
    \hline
-   \includegraphics[width=0.5\textwidth]{figures/box-marketing.png}
-	&   
-   \includegraphics[width=0.5\textwidth]{figures/box-management.png}
+   \includegraphics[width=0.4\columnwidth]{figures/box-marketing.png}
+	\\  
+   \includegraphics[width=0.4\columnwidth]{figures/box-management.png}
    \\
    \hline
    \end{tabular}
@@ -269,26 +244,11 @@ Note that precision in this case is equal to a student’s probability of gradua
   \caption{Time and units spent in each major}~\label{tab:boxplotTable}
 \end{table}
 
+\section{DISCUSSION}
 
-\begin{table}[h!]
- \begin{center}
-   \begin{tabular}{| c | c |}
+Cluster analysis can also help to identify common traits among students within each cluster. For each department the second cluster spends on average four semesters enrolled with that major declared (\ref{tab:boxplotTable}). However the probability of these students graduating with the major is quite low (see \ref{tab:scoresTable}).
+Note that precision in this case is equal to a student’s probability of graduating given that they are in cluster 1, and the false omission rate is equal to a student’s probability of graduating given that they are in cluster 2.
 
-   \hline
-   \includegraphics[width=0.5\textwidth]{figures/EconomicsPCA.png}
-   &
-   \includegraphics[width=0.5\textwidth]{figures/BusinessLawPCA.png}
-   \\
-   \hline
-   \includegraphics[width=0.5\textwidth]{figures/MarketingPCA.png}
-	&   
-   \includegraphics[width=0.5\textwidth]{figures/ManagementPCA.png}
-   \\
-   \hline
-   \end{tabular}
- \end{center}
- \caption{PCA plots with course vector labels}~\label{tab:pcaTable}
-\end{table}
 
 
 
@@ -305,18 +265,54 @@ Students may fail to graduate in CoBaE because they either change majors or disc
 
 Our results can be further refined by adding student metadata, for example: college year the major was declared, number of transfer credits, number of classes per term, financial aid, student demographics (such as age, gender, ethnicity, zip code) and various measures of student preparedness like SAT scores. With a more detailed feature space, our methods might be able to identify patterns and more well defined clusters. 
 
-
-
-
 \section{CONCLUSION}
 
 We trained unsupervised classifiers on grade data from four undergraduate majors at CSUN. In each case we found strongly predictive clusters, and found that cluster separation was driven disproportionately by a small number of bottleneck courses. We also found that training classifiers on the first three classes on the graduation pathway was an effective early detection method. We argue that reforming, or at the very least investigating, these bottleneck courses are crucial to understanding student attrition.
+\begin{table}[h!]
+ \begin{center}
+   \begin{tabular}{| c | c |}
+   \hline
+   \includegraphics[width=0.2\textwidth]{figures/ROC-Economics.png}
+   &
+   \includegraphics[width=0.2\textwidth]{figures/ROC-Business-Law.png}
+   \\
+   \hline
+   \includegraphics[width=0.2\textwidth]{figures/roc-marketing.png}
+	&   
+   \includegraphics[width=0.2\textwidth]{figures/roc-management.png}
+   \\
+   \hline
+   \end{tabular}
+ \end{center}
+ \caption{ROC plots for both classifiers on the full course set and the first three courses }~\label{tab:rocTable}
+\end{table}
 
 
+\begin{table}[h!]
+ \begin{center}
+   \begin{tabular}{| c | c |}
+
+   \hline
+   \includegraphics[width=0.2\textwidth]{figures/EconomicsPCA.png}
+   &
+   \includegraphics[width=0.2\textwidth]{figures/BusinessLawPCA.png}
+   \\
+   \hline
+   \includegraphics[width=0.2\textwidth]{figures/MarketingPCA.png}
+	&   
+   \includegraphics[width=0.2\textwidth]{figures/ManagementPCA.png}
+   \\
+   \hline
+   \end{tabular}
+ \end{center}
+ \caption{PCA plots with course vector labels}~\label{tab:pcaTable}
+\end{table}
 
 \section{ACKNOWLEDGMENTS}
 
 We gratefully acknowledge support from CSUN’s Office of the Provost and Academic Affairs. We thank Provost Harry Hellenbrand and VIce-Provost Michael Neubauer for their institutional support, and Bettina Huber, CSUN Director of Institutional Research, for making the data available. We also thank Yauheniya (Gina) Lahoda and Dr. Bruce Shapiro for numerous conversations during the Spring 2015 Machine Learning seminar. 
+
+
 
 \balance{}
 \bibliographystyle{SIGCHI-Reference-Format}
