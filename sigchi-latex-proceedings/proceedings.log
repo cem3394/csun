@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.12.2)  22 MAY 2015 22:13
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.12.2)  22 MAY 2015 22:47
 entering extended mode
  %&-line parsing enabled.
 **proceedings.tex
@@ -878,13 +878,18 @@ Overfull \hbox (13.67363pt too wide) in paragraph at lines 103--103
  []\eaddfnt programminglinguist@gmail.com 
  []
 
+
+Overfull \hbox (3.69034pt too wide) in paragraph at lines 103--103
+ []\eaddfnt seyed.sajjadi.947@my.csun.edu 
+ []
+
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 Missing character: There is no √ in font ptmr7t!
 Missing character: There is no ≠ in font ptmr7t!
 
-Underfull \vbox (badness 2753) has occurred while \output is active []
+Underfull \vbox (badness 5008) has occurred while \output is active []
 
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -899,54 +904,64 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no î in font ptmr7t!
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 159.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 153.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ò in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 167.
+ <figures/ch-4-majors.png, id=86, 722.7pt x 433.62pt>
+File: figures/ch-4-majors.png Graphic file (type png)
+
+<use figures/ch-4-majors.png>
+Overfull \hbox (24.39972pt too wide) in paragraph at lines 172--173
+ [][] 
+ []
 
 
-LaTeX Warning: Reference `fig:CHindex' on page \thepage  undefined on input lin
-e 167.
-
-
-LaTeX Warning: Reference `fig:CHindex' on page \thepage  undefined on input lin
-e 174.
-
-
-Overfull \hbox (11.49776pt too wide) in paragraph at lines 219--220
+Overfull \hbox (11.49776pt too wide) in paragraph at lines 220--221
 [][] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 1845) in paragraph at lines 226--227
+Underfull \hbox (badness 1845) in paragraph at lines 227--228
 []\OT1/ptm/m/n/10 In each case we iden-ti-fied strongly pre-dic-tive clus-ters.
 
  []
 
-<figures/box-Economics.png, id=86, 1084.05pt x 433.62pt>
+<figures/box-Economics.png, id=90, 1084.05pt x 433.62pt>
 File: figures/box-Economics.png Graphic file (type png)
 
 <use figures/box-Economics.png>
-<figures/box-Business-Law.png, id=88, 1084.05pt x 433.62pt>
+<figures/box-Business-Law.png, id=91, 1084.05pt x 433.62pt>
 File: figures/box-Business-Law.png Graphic file (type png)
 
 <use figures/box-Business-Law.png>
-<figures/box-marketing.png, id=89, 1084.05pt x 433.62pt>
+<figures/box-marketing.png, id=92, 1084.05pt x 433.62pt>
 File: figures/box-marketing.png Graphic file (type png)
 
 <use figures/box-marketing.png>
-<figures/box-management.png, id=90, 1084.05pt x 433.62pt>
+<figures/box-management.png, id=93, 1084.05pt x 433.62pt>
 File: figures/box-management.png Graphic file (type png)
 
 <use figures/box-management.png>
+<figures/ROC-Economics.png, id=94, 650.43pt x 433.62pt>
+File: figures/ROC-Economics.png Graphic file (type png)
+
+<use figures/ROC-Economics.png>
+<figures/ROC-Business-Law.png, id=95, 650.43pt x 433.62pt>
+File: figures/ROC-Business-Law.png Graphic file (type png)
+
+<use figures/ROC-Business-Law.png>
+<figures/roc-marketing.png, id=96, 650.43pt x 433.62pt>
+File: figures/roc-marketing.png Graphic file (type png)
+
+<use figures/roc-marketing.png>
+<figures/roc-management.png, id=97, 650.43pt x 433.62pt>
+File: figures/roc-management.png Graphic file (type png)
+
+<use figures/roc-management.png>
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
@@ -957,35 +972,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.251 
-       [2 <./figures/box-Economics.png> <./figures/box-Business-Law.png> <./fig
-ures/box-marketing.png> <./figures/box-management.png>]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ò in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-
-<figures/ROC-Economics.png, id=110, 650.43pt x 433.62pt>
-File: figures/ROC-Economics.png Graphic file (type png)
-
-<use figures/ROC-Economics.png>
-<figures/ROC-Business-Law.png, id=111, 650.43pt x 433.62pt>
-File: figures/ROC-Business-Law.png Graphic file (type png)
-
-<use figures/ROC-Business-Law.png>
-<figures/roc-marketing.png, id=112, 650.43pt x 433.62pt>
-File: figures/roc-marketing.png Graphic file (type png)
-
-<use figures/roc-marketing.png>
-<figures/roc-management.png, id=113, 650.43pt x 433.62pt>
-File: figures/roc-management.png Graphic file (type png)
-
-<use figures/roc-management.png>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+l.272 
+       [2 <./figures/ch-4-majors.png>]
 <figures/EconomicsPCA.png, id=114, 563.10374pt x 383.4325pt>
 File: figures/EconomicsPCA.png Graphic file (type png)
 
@@ -1007,29 +995,29 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ò in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-(./proceedings.bbl
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 39.
- (/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 39.
-
-
-Package balance Warning: You have called \balance in second column
-(balance)                Columns might not be balanced.
-
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.74 \bibitem{duda2012pattern}
-                               [3 <./figures/ROC-Economics.png> <./figures/ROC-
-Business-Law.png> <./figures/roc-marketing.png> <./figures/roc-management.png> 
-<./figures/EconomicsPCA.png (PNG copy)> <./figures/BusinessLawPCA.png (PNG copy
-)> <./figures/MarketingPCA.png (PNG copy)> <./figures/ManagementPCA.png (PNG co
-py)>]
+l.316 
+       [3 <./figures/box-Economics.png> <./figures/box-Business-Law.png> <./fig
+ures/box-marketing.png> <./figures/box-management.png> <./figures/ROC-Economics
+.png> <./figures/ROC-Business-Law.png> <./figures/roc-marketing.png> <./figures
+/roc-management.png>] (./proceedings.bbl
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 39.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 39.
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ú in font ptmr7t!
@@ -1039,36 +1027,31 @@ Missing character: There is no ù in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-)
-Overfull \vbox (1.23245pt too high) has occurred while \output is active []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
+)pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.321 \end{document}
-                     [4] (./proceedings.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+l.323 \end{document}
+                     [4 <./figures/EconomicsPCA.png (PNG copy)> <./figures/Busi
+nessLawPCA.png (PNG copy)> <./figures/MarketingPCA.png (PNG copy)> <./figures/M
+anagementPCA.png (PNG copy)>] (./proceedings.aux) ) 
 Here is how much of TeX's memory you used:
- 15004 strings out of 495061
- 260467 string characters out of 1182621
- 326866 words of memory out of 3000000
- 17773 multiletter control sequences out of 15000+50000
- 42222 words of font info for 100 fonts, out of 3000000 for 9000
+ 15008 strings out of 495061
+ 260572 string characters out of 1182621
+ 327521 words of memory out of 3000000
+ 17776 multiletter control sequences out of 15000+50000
+ 40596 words of font info for 98 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 63i,17n,57p,1044b,404s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
-ve/fonts/type1/public/txfonts/txsy.pfb></usr/share/texmf-texlive/fonts/type1/ur
-w/courier/ucrb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.
-pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texm
-f-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type
-1/urw/times/utmri8a.pfb>
-Output written on proceedings.pdf (4 pages, 449748 bytes).
+ 63i,17n,57p,1044b,401s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fo
+nts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/txfonts/
+txsy.pfb></usr/share/texmf-texlive/fonts/type1/urw/courier/ucrb8a.pfb></usr/sha
+re/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/
+fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/time
+s/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on proceedings.pdf (4 pages, 479472 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 169 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
 

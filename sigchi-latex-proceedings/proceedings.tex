@@ -92,7 +92,7 @@
   \alignauthor{Seyed Sajjadi\\
     \affaddr{California State University, Northridge}\\
     \affaddr{Northridge, USA}\\
-    \email{Seyed Sajjadi.947@my.csun.eud}}\\
+    \email{seyed.sajjadi.947@my.csun.edu}}\\
   \alignauthor{Carol Shubin\\
     \affaddr{California State University, Northridge}\\
     \affaddr{Northridge, USA}\\
@@ -136,12 +136,6 @@ Luan ~\cite{luan2002data} studied clustering aspect of data mining offers compre
 
 
 
-
-
-
-
-
-
 \section{METHOD}
 
 \subsection{Data Collection and Preprocessing}
@@ -171,16 +165,22 @@ We then established the predictive power of the clusters by testing them on a cl
 
 \section{RESULTS}
 
-The optimal number of clusters was determined to be two in all departments (see \ref{fig:CHindex}). The Management and Marketing departments showed better between-cluster separation than Economics and Business Law. 
+The optimal number of clusters was determined to be two in all departments (see figure \ref{fig:CHindex}). The Management and Marketing departments showed better between-cluster separation than Economics and Business Law. 
+
+\begin{figure}
+\centering
+  \includegraphics[width=1.1\columnwidth]{figures/ch-4-majors.png}
+  \caption{Calinski\-Harabasz indices for all four datasets}~\label{fig:CHindex}
+\end{figure}
 
 We applied the same approach to the first three classes that students would normally take within their first year at school. Table \ref{tab:scoresTable} shows the Accuracy, Precision, Recall, F1 Scores and False Omission Rates resulting from the both classifiers when trained on the full feature set and on the first three courses in each major. 
 
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
-\begin{table}[h]
+\begin{table}[hb]
 \scalebox{0.6}{
-\begin{tabular}{ccccccc}
+\begin{tabular}{cc|ccccc}
                                                                          & Model & Accuracy & Precision & Recall & F1 Score & False Omission Rate\\
 \multirow{4}{*}{Management}                           & Logistic Full Set & 0.91 & 0.82 & 0.91 & 0.86 & 0.04
      \\
@@ -190,7 +190,7 @@ We applied the same approach to the first three classes that students would norm
      \\
                                                                          & KMeans 3 Courses & 0.65 & 0.46 & 0.88 & 0.6 & 0.08
     \\
-
+\hline
 \multirow{4}{*}{Economics}                              & Logistic Full Set & 0.86 & 0.81 & 0.83 & 0.82 & 0.1
   \\
                                                                          & Logistic 3 Courses & 0.64 & 0.54 & 0.45 & 0.49 & 0.32
@@ -199,7 +199,7 @@ We applied the same approach to the first three classes that students would norm
      \\
                                                                          & KMeans 3 Courses & 0.45 & 0.21 & 0.16 & 0.18 & 0.46
     \\
-
+\hline
 \multirow{4}{*}{Marketing}                                & Logistic Full Set & 0.88 & 0.8 & 0.89 & 0.84 & 0.06
      \\
                                                                          & Logistic 3 Courses & 0.68 & 0.54 & 0.51 & 0.52 & 0.25
@@ -208,6 +208,7 @@ We applied the same approach to the first three classes that students would norm
      \\
                                                                          & KMeans 3 Courses & 0.78 & 0.63 & 0.99 & 0.77 & 0.0
      \\
+\hline
 \multirow{4}{*}{\begin{tabular}[c]{@{}c@{}}Business \\ Law\end{tabular}} & Logistic Full Set & 0.79 & 0.72 & 0.69 & 0.71 & 0.17
      \\
                                                                          & Logistic 3 Courses & 0.63 & 0.5 & 0.38 & 0.43 & 0.32
@@ -223,63 +224,40 @@ We applied the same approach to the first three classes that students would norm
 
 We expected that a predictive model trained on the full feature set of course grades would be more effective than a model using cluster labels from unsupervised clustering. To test this hypothesis, we compared the performance of a logistic regression classifier trained on the full feature set to the performance of a classifier that used co-membership information from the clusters on a classification task: to predict whether the student had in fact graduated with that major. The cluster-based classifier estimated the probability that a student belonged to a particular category using the fraction of co-clustered samples that also belonged to the category of interest.
 
-In each case we identified strongly predictive clusters. Though outperformed, the cluster-based classifiers compared surprisingly well with the logistic regression models (see \ref{tab:rocTable}). Heuristically speaking, students in the same cluster tended to drop out at the same times after getting the same grades in the same courses. 
+In each case we identified strongly predictive clusters. Though outperformed, the cluster-based classifiers compared surprisingly well with the logistic regression models (see figure \ref{tab:rocTable}). Heuristically speaking, students in the same cluster tended to drop out at the same times after getting the same grades in the same courses. 
 
 \begin{table}[ht]
  \begin{center}
+\scalebox{0.9}{
    \begin{tabular}{ c }
    \hline
-   \includegraphics[width=0.4\columnwidth]{figures/box-Economics.png}
+   \includegraphics[width=0.5\textwidth]{figures/box-Economics.png}
    \\
-   \includegraphics[width=0.4\columnwidth]{figures/box-Business-Law.png}
+   \includegraphics[width=0.5\textwidth]{figures/box-Business-Law.png}
    \\
    \hline
-   \includegraphics[width=0.4\columnwidth]{figures/box-marketing.png}
+   \includegraphics[width=0.5\textwidth]{figures/box-marketing.png}
 	\\  
-   \includegraphics[width=0.4\columnwidth]{figures/box-management.png}
+   \includegraphics[width=0.5\textwidth]{figures/box-management.png}
    \\
    \hline
-   \end{tabular}
+   \end{tabular}}
  \end{center}
   \caption{Time and units spent in each major}~\label{tab:boxplotTable}
 \end{table}
 
-\section{DISCUSSION}
-
-Cluster analysis can also help to identify common traits among students within each cluster. For each department the second cluster spends on average four semesters enrolled with that major declared (\ref{tab:boxplotTable}). However the probability of these students graduating with the major is quite low (see \ref{tab:scoresTable}).
-Note that precision in this case is equal to a student’s probability of graduating given that they are in cluster 1, and the false omission rate is equal to a student’s probability of graduating given that they are in cluster 2.
-
-
-
-
-Principal component analysis (PCA) plots were used to investigate course contribution to cluster variation for each major. The PCA plots (\ref{tab:pcaTable}) determine the orthonormal directions of maximum variance in each dataset. The student grades are projected onto the first and second principal components, and the red and blue colors mark the clusters as determined by the K-Means algorithm. The management and marketing majors show more spatially separated clusters than those of economics and business law. 
-
-A few course vectors are also shown; and here we see that, across majors, the ENGL205 and SOM120 vectors lie parallel  to the axis of separation between the two clusters, so these courses do not contribute meaningfully to cluster separation. Conversely, the class vectors (such as ACCT230) that lie perpendicular to the axis of separation contribute the most to cluster separation. Interestingly, there are courses (such as MATH150A) that play this role amongst several different majors. While these courses may not raise flags in any particular department, the fact that they are disproportionately driving student attrition rates should be of concern. We suggest that reforming, or at the very least investigating, these ‘hidden bottleneck’ courses may be crucial to understanding student attrition at large.
-
-
-
-\section{LIMITATIONS AND FUTURE WORK}
-
-
-Students may fail to graduate in CoBaE because they either change majors or discontinue their education at CSUN.  Hierarchical clustering methods could provide more detailed information on student outcomes, such as predicting which department a student might change their major to. Collaborative filtering methods could also give departmental recommendations to students considering a change of major. These methods could be used to develop early warning and recommendation systems for automated advisement, which would be especially beneficial to over-taxed advisement systems at comprehensive state universities such as CSUN.
-
-Our results can be further refined by adding student metadata, for example: college year the major was declared, number of transfer credits, number of classes per term, financial aid, student demographics (such as age, gender, ethnicity, zip code) and various measures of student preparedness like SAT scores. With a more detailed feature space, our methods might be able to identify patterns and more well defined clusters. 
-
-\section{CONCLUSION}
-
-We trained unsupervised classifiers on grade data from four undergraduate majors at CSUN. In each case we found strongly predictive clusters, and found that cluster separation was driven disproportionately by a small number of bottleneck courses. We also found that training classifiers on the first three classes on the graduation pathway was an effective early detection method. We argue that reforming, or at the very least investigating, these bottleneck courses are crucial to understanding student attrition.
-\begin{table}[h!]
+\begin{table}[hb]
  \begin{center}
    \begin{tabular}{| c | c |}
    \hline
-   \includegraphics[width=0.2\textwidth]{figures/ROC-Economics.png}
+   \includegraphics[width=0.45\columnwidth]{figures/ROC-Economics.png}
    &
-   \includegraphics[width=0.2\textwidth]{figures/ROC-Business-Law.png}
+   \includegraphics[width=0.45\columnwidth]{figures/ROC-Business-Law.png}
    \\
    \hline
-   \includegraphics[width=0.2\textwidth]{figures/roc-marketing.png}
+   \includegraphics[width=0.45\columnwidth]{figures/roc-marketing.png}
 	&   
-   \includegraphics[width=0.2\textwidth]{figures/roc-management.png}
+   \includegraphics[width=0.45\columnwidth]{figures/roc-management.png}
    \\
    \hline
    \end{tabular}
@@ -287,6 +265,10 @@ We trained unsupervised classifiers on grade data from four undergraduate majors
  \caption{ROC plots for both classifiers on the full course set and the first three courses }~\label{tab:rocTable}
 \end{table}
 
+\section{DISCUSSION}
+
+Cluster analysis can also help to identify common traits among students within each cluster. For each department the second cluster spends on average four semesters enrolled with that major declared (\ref{tab:boxplotTable}). However the probability of these students graduating with the major is quite low (see table \ref{tab:scoresTable}).
+Note that precision in this case is equal to a student’s probability of graduating given that they are in cluster 1, and the false omission rate is equal to a student’s probability of graduating given that they are in cluster 2.
 
 \begin{table}[h!]
  \begin{center}
@@ -307,6 +289,26 @@ We trained unsupervised classifiers on grade data from four undergraduate majors
  \end{center}
  \caption{PCA plots with course vector labels}~\label{tab:pcaTable}
 \end{table}
+
+Principal component analysis (PCA) plots were used to investigate course contribution to cluster variation for each major. The PCA plots (\ref{tab:pcaTable}) determine the orthonormal directions of maximum variance in each dataset. The student grades are projected onto the first and second principal components, and the red and blue colors mark the clusters as determined by the K-Means algorithm. The management and marketing majors show more spatially separated clusters than those of economics and business law. 
+
+A few course vectors are also shown; and here we see that, across majors, the ENGL205 and SOM120 vectors lie parallel  to the axis of separation between the two clusters, so these courses do not contribute meaningfully to cluster separation. Conversely, the class vectors (such as ACCT230) that lie perpendicular to the axis of separation contribute the most to cluster separation. Interestingly, there are courses (such as MATH150A) that play this role amongst several different majors. While these courses may not raise flags in any particular department, the fact that they are disproportionately driving student attrition rates should be of concern. We suggest that reforming, or at the very least investigating, these ‘hidden bottleneck’ courses may be crucial to understanding student attrition at large.
+
+
+
+
+\section{LIMITATIONS AND FUTURE WORK}
+
+
+Students may fail to graduate in CoBaE because they either change majors or discontinue their education at CSUN.  Hierarchical clustering methods could provide more detailed information on student outcomes, such as predicting which department a student might change their major to. Collaborative filtering methods could also give departmental recommendations to students considering a change of major. These methods could be used to develop early warning and recommendation systems for automated advisement, which would be especially beneficial to over-taxed advisement systems at comprehensive state universities such as CSUN.
+
+Our results can be further refined by adding student metadata, for example: college year the major was declared, number of transfer credits, number of classes per term, financial aid, student demographics (such as age, gender, ethnicity, zip code) and various measures of student preparedness like SAT scores. With a more detailed feature space, our methods might be able to identify patterns and more well defined clusters. 
+
+\section{CONCLUSION}
+
+We trained unsupervised classifiers on grade data from four undergraduate majors at CSUN. In each case we found strongly predictive clusters, and found that cluster separation was driven disproportionately by a small number of bottleneck courses. We also found that training classifiers on the first three classes on the graduation pathway was an effective early detection method. We argue that reforming, or at the very least investigating, these bottleneck courses are crucial to understanding student attrition.
+
+
 
 \section{ACKNOWLEDGMENTS}
 
