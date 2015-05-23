@@ -1,0 +1,142 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{00}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{{\tt DOI:}\penalty0{#1}\ }
+  \fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
+
+\bibitem{csun2}
+\showarticletitle{CSUN Colleges: Changes and Grades}.
+\newblock
+\showURL{%
+\url{http://p.rovo.st/blog/?p=47}}
+
+
+\bibitem{csun1}
+\showarticletitle{CSUN Office of Institutional Research Report}.
+\newblock
+\showURL{%
+\url{http://www.csun.edu/~instrsch/retentionrates.html}}
+
+
+\bibitem{al2006mining}
+{Qasem~A Al-Radaideh}, {Emad~M Al-Shawakfa}, {and} {Mustafa~I Al-Najjar}. 2006.
+\newblock \showarticletitle{Mining student data using decision trees}. In {\em
+  International Arab Conference on Information Technology (ACIT 2006), Yarmouk
+  University, Jordan}.
+\newblock
+
+
+\bibitem{ayesha2010data}
+{Shaeela Ayesha}, {Tasleem Mustafa}, {Ahsan~Raza Sattar}, {and} {M~Inayat
+  Khan}. 2010.
+\newblock \showarticletitle{Data mining model for higher education system}.
+\newblock {\em Europen Journal of Scientific Research\/} {43}, 1 (2010),
+  24--29.
+\newblock
+
+
+\bibitem{calinski1974dendrite}
+{Tadeusz Cali{\'n}ski} {and} {Jerzy Harabasz}. 1974.
+\newblock \showarticletitle{A dendrite method for cluster analysis}.
+\newblock {\em Communications in Statistics-theory and Methods\/} {3}, 1
+  (1974), 1--27.
+\newblock
+
+
+\bibitem{duda2012pattern}
+{Richard~O Duda}, {Peter~E Hart}, {and} {David~G Stork}. 2012.
+\newblock {\em Pattern classification}.
+\newblock John Wiley \& Sons.
+\newblock
+
+
+\bibitem{gordon1999classification}
+{A.D. Gordon}. 1999.
+\newblock {\em Classification, 2nd Edition}.
+\newblock CRC Press.
+\newblock
+\showISBNx{9781584888536}
+\showURL{%
+\url{https://books.google.com/books?id=\_w5AJtbfEz4C}}
+
+
+\bibitem{knights2014rethinking}
+{Dan Knights}, {Tonya~L Ward}, {Christopher~E McKinlay}, {Hannah Miller},
+  {Antonio Gonzalez}, {Daniel McDonald}, {and} {Rob Knight}. 2014.
+\newblock \showarticletitle{Rethinking “Enterotypes”}.
+\newblock {\em Cell host \& microbe\/} {16}, 4 (2014), 433--437.
+\newblock
+
+
+\bibitem{luan2002data}
+{Jing Luan}. 2002.
+\newblock \showarticletitle{Data Mining and Knowledge Management in Higher
+  Education-Potential Applications.}
+\newblock  (2002).
+\newblock
+
+
+\bibitem{macqueen1967some}
+{James MacQueen} {and} {others}. 1967.
+\newblock \showarticletitle{Some methods for classification and analysis of
+  multivariate observations}. In {\em Proceedings of the fifth Berkeley
+  symposium on mathematical statistics and probability}, Vol.~1. Oakland, CA,
+  USA., 281--297.
+\newblock
+
+
+\bibitem{romero2010educational}
+{Crist{\'o}bal Romero} {and} {Sebasti{\'a}n Ventura}. 2010.
+\newblock \showarticletitle{Educational Data Mining: A Review of the
+  State-of-the-Art}.
+\newblock {\em Systems, Man, and Cybernetics, Part C: Applications and Reviews,
+  IEEE Transactions on\/} {40}, 6 (2010), 601--618.
+\newblock
+
+
+\bibitem{romero2008data}
+{Crist{\'o}bal Romero}, {Sebasti{\'a}n Ventura}, {and} {Enrique Garc{\'\i}a}.
+  2008.
+\newblock \showarticletitle{Data mining in course management systems: Moodle
+  case study and tutorial}.
+\newblock {\em Computers \& Education\/} {51}, 1 (2008), 368--384.
+\newblock
+
+
+\bibitem{tair2012mining}
+{Mohammed M~Abu Tair} {and} {Alaa~M El-Halees}. 2012.
+\newblock \showarticletitle{Mining educational data to improve students’
+  performance: A case study}.
+\newblock {\em International Journal of Information\/} {2}, 2 (2012).
+\newblock
+
+
+\end{thebibliography}
