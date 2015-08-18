@@ -102,10 +102,10 @@
 \maketitle
 \begin{abstract}
   
-With pressure to increase graduation and reduce time to degree in higher education, it is important to identify at-risk students early. Automated early warning systems are therefore highly desirable. In this paper, we use unsupervised clustering techniques to predict the graduation status of declared majors in four departments at California State University Northridge (CSUN), based on a minimal number of lower division courses in each major. In addition, we use the detected clusters to identify hidden bottleneck courses. 
+With pressure to increase graduation rates and reduce time to degree in higher education, it is important to identify at-risk students early. Automated early warning systems are therefore highly desirable. In this paper, we use unsupervised clustering techniques to predict the graduation status of declared majors in four departments at California State University Northridge (CSUN), based on a minimal number of lower division courses in each major. In addition, we use the detected clusters to identify hidden bottleneck courses. 
 \end{abstract}
 
-\keywords{educational data\-mining; clustering; regression; k\-means}
+\keywords{educational data\-mining; clustering; regression; K\-means}
 
 \category{H.5.m.}{Information Interfaces and Presentation
   (e.g. HCI)}{Miscellaneous} 
@@ -116,21 +116,21 @@ With pressure to increase graduation and reduce time to degree in higher educati
 
 Policy makers, the public, university administrators, students and their families are concerned about low graduation rates and lengthy times to degree in higher education. At CSUN for example, the median time to degree is six years and the six-year graduation rate is 41\% ~\cite{csun1}. A related issue is the incidence of major-switching, since re-declaring a major is time-consuming and costly. Approximately 24\% of CSUN students re-declare their major, and the plurality of these changes involve departments in the David Nazarian College of Business and Economics (CoBaE) ~\cite{csun2}. For this reason we focused our analysis on four departments within the CoBaE.
 
-With an enrollment of over 6000 undergraduate students, CoBaE is one of largest business schools in the nation. CoBaE confers the second most undergraduate degrees at CSUN (behind the College of Social and Behavioral Science), and it has three of the top ten most popular majors (management, finance, and marketing) at CSUN. 
+With an enrollment of over 6000 undergraduate students, CoBaE is one of largest business schools in the nation. CoBaE confers the second most undergraduate degrees at CSUN (behind the College of Social and Behavioral Science), and it has three of the top ten most popular majors (Management, Finance, and Marketing) at CSUN. 
 
-In this paper, we trained K-means classifiers on grade data from undergraduate majors in the CoBaE: economics, business law, management, and marketing. Strongly predictive clusters were present in each of the four departments. We found that cluster separation was driven disproportionately by a small number of bottleneck courses. We also found that training classifiers on just the first three classes on the graduation pathway was an effective early detection method. 
+In this paper, we trained K-means classifiers on grade data from undergraduate majors in the CoBaE: Economics, Business Law, Management, and Marketing. Strongly predictive clusters were present in each of the four departments. We found that cluster separation was driven disproportionately by a small number of bottleneck courses. We also found that training classifiers on just the first three classes on the graduation pathway was an effective early detection method. 
 
 \section{RELATED WORK}
 
 Educational data mining is an emerging discipline, concerned with developing methods for exploring the unique types of data that come from the educational sphere. The field encompasses various subdomains such as modeling student learning to better optimize performance, to detecting outliers, to developing automated tutoring systems that intelligently adapt lesson plans to the individual learning styles, see ~\cite{romero2010educational}. 
 
-Luan ~\cite{luan2002data} studied clustering aspect of data mining offers comprehensive characteristics analysis of students and offered likelihood estimates for a variety of outcomes, such as transferability, persistence, retention, and success in classes.  Al-Radaideh et al. ~\cite{al2006mining} applied classification techniques to determine the main attributes that may affect student performance. Tair and El-Halees ~\cite{tair2012mining}, used K-means to predict graduate students’ performance, and overcome the problem of low grades of graduate students.  Ayesha, Mustafa, Sattar and Khan ~\cite{ayesha2010data} have also used K-means clustering to predict student performance in a particular course. Romero, Ventura and García ~\cite{romero2008data} described the full process of clustering, classification, statistics and visualization in the context of mining Moodle (e-learning) data. Our current work uses unsupervised clustering methods to address the issue of large scale student behavior.
+Luan ~\cite{luan2002data} studied clustering aspect of data mining offers comprehensive characteristics analysis of students and offered likelihood estimates for a variety of outcomes, such as transferability, persistence, retention, and success in classes.  Al-Radaideh et al. ~\cite{al2006mining} applied classification techniques to determine the main attributes that may affect student performance. Tair and El-Halees ~\cite{tair2012mining}, used K-means to predict graduate students performance, and overcome the problem of low grades of graduate students.  Ayesha, Mustafa, Sattar and Khan ~\cite{ayesha2010data} have also used K-means clustering to predict student performance in a particular course. Romero, Ventura and Garca ~\cite{romero2008data} described the full process of clustering, classification, statistics and visualization in the context of mining Moodle (e-learning) data. Our current work uses unsupervised clustering methods to address the issue of large scale student behavior.
 
 \section{METHOD}
 
 \subsection{Data Collection and Preprocessing}
 
-We obtained academic records containing grade information from declared majors in four departments in the College of Business and Economics at CSUN. The majors we inspected were Economics, Management, Marketing and Business Law. The data spans a fifteen year period between 2000 and 2014—containing 13,484 student records in total—and contains only the courses required for each major. 
+We obtained academic records containing grade information from declared majors in four departments in the College of Business and Economics at CSUN. The majors we inspected were Economics, Management, Marketing and Business Law. The data spans a fifteen year period between 2000 and 2014 ��containing 13,484 student records in total ��and contains only the courses required for each major. 
 
 The grade data for each course were encoded with the following normalized GPA scale prior to statistical analysis: 
 
@@ -148,14 +148,14 @@ Missing data was encoded as an ‘F’ in order to facilitate the analysis, sinc
 
 \subsection{Cluster Analysis}
 
-There are a few fundamental issues involved in cluster analysis, notably determining whether discrete clusters are present ~\cite{knights2014rethinking} and choosing the appropriate number of clusters ~\cite{gordon1999classification} ~\cite{duda2012pattern}. We applied the K-means algorithm ~\cite{macqueen1967some} to the grade data and used the Calinski-Harabasz (CH) index \cite{calinski1974dendrite} to determine the optimal number of clusters on fivefold cross-validated datasets (\ref{fig:CHindex}).
+There are a few fundamental issues involved in cluster analysis, notably determining whether discrete clusters are present ~\cite{knights2014rethinking} and choosing the appropriate number of clusters ~\cite{gordon1999classification} ~\cite{duda2012pattern}. We applied the K-means algorithm ~\cite{macqueen1967some} to the grade data and used the Calinski-Harabasz (CH) index \cite{calinski1974dendrite} to determine the optimal number of clusters on fivefold cross-validated datasets ( Figure \ref{fig:CHindex}).
 
-We then established the predictive power of the clusters by testing them on a classification task. We compared the cluster-based classifiers with logistic regression classifiers in predicting the graduation status of hold-out samples for each department. Receiver Operating Characteristic (ROC) curves were then used to evaluate and compare predictive performance of clustering and logistic regression methods for each department (\ref{tab:rocTable}). Finally, we performed the same steps to predict graduation status based on the typical first three courses in each major.
+We then established the predictive power of the clusters by testing them on a classification task. We compared the cluster-based classifiers with logistic regression classifiers in predicting the graduation status of hold-out samples for each department. Receiver Operating Characteristic (ROC) curves were then used to evaluate and compare predictive performance of clustering and logistic regression methods for each department ( Table \ref{tab:rocTable}). Finally, we performed the same steps to predict graduation status based on the typical first three courses in each major.
 
 
 \section{RESULTS}
 
-The optimal number of clusters was determined to be two in all departments (see figure \ref{fig:CHindex}). The Management and Marketing departments showed better between-cluster separation than Economics and Business Law. 
+The optimal number of clusters was determined to be two in all departments (see Figure \ref{fig:CHindex}). The Management and Marketing departments showed better between-cluster separation than Economics and Business Law. 
 
 \begin{figure}
 \centering
@@ -163,14 +163,6 @@ The optimal number of clusters was determined to be two in all departments (see 
   \caption{Calinski\-Harabasz indices for all four datasets}~\label{fig:CHindex}
 \end{figure}
 
-
-
-
-\begin{figure}
-\centering
-  \includegraphics[width=0.4\columnwidth]{figures/ch-4-majors.png}
-  \caption{Calinski\-Harabasz indices for all four datasets}~\label{fig:CHindex}
-\end{figure}
 
 We applied the same approach to the first three classes that students would normally take within their first year at school. Table \ref{tab:scoresTable} shows the Accuracy, Precision, Recall, F1 Scores and False Omission Rates resulting from the both classifiers when trained on the full feature set and on the first three courses in each major. 
 
@@ -185,45 +177,46 @@ We applied the same approach to the first three classes that students would norm
      \\
                                                                          & Logistic 3 Courses & 0.7 & 0.48 & 0.31 & 0.38 & 0.25
      \\
-                                                                         & KMeans Full Set & 0.78 & 0.57 & 1.0 & 0.73 & 0.0
+                                                                         & K-means Full Set & 0.78 & 0.57 & 1.0 & 0.73 & 0.0
      \\
-                                                                         & KMeans 3 Courses & 0.65 & 0.46 & 0.88 & 0.6 & 0.08
+                                                                         & K-means 3 Courses & 0.65 & 0.46 & 0.88 & 0.6 & 0.08
     \\
 \hline
 \multirow{4}{*}{Economics}                              & Logistic Full Set & 0.86 & 0.81 & 0.83 & 0.82 & 0.1
   \\
                                                                          & Logistic 3 Courses & 0.64 & 0.54 & 0.45 & 0.49 & 0.32
     \\
-                                                                         & KMeans Full Set & 0.82 & 0.7 & 0.94 & 0.8 & 0.05
+                                                                         & K-means Full Set & 0.82 & 0.7 & 0.94 & 0.8 & 0.05
      \\
-                                                                         & KMeans 3 Courses & 0.45 & 0.21 & 0.16 & 0.18 & 0.46
+                                                                         & K-means 3 Courses & 0.45 & 0.21 & 0.16 & 0.18 & 0.46
     \\
 \hline
 \multirow{4}{*}{Marketing}                                & Logistic Full Set & 0.88 & 0.8 & 0.89 & 0.84 & 0.06
      \\
                                                                          & Logistic 3 Courses & 0.68 & 0.54 & 0.51 & 0.52 & 0.25
      \\
-                                                                         & KMeans Full Set & 0.78 & 0.63 & 0.99 & 0.77 & 0.0
+                                                                         & K-means Full Set & 0.78 & 0.63 & 0.99 & 0.77 & 0.0
      \\
-                                                                         & KMeans 3 Courses & 0.78 & 0.63 & 0.99 & 0.77 & 0.0
+                                                                         & K-means 3 Courses & 0.78 & 0.63 & 0.99 & 0.77 & 0.0
      \\
 \hline
 \multirow{4}{*}{\begin{tabular}[c]{@{}c@{}}Business \\ Law\end{tabular}} & Logistic Full Set & 0.79 & 0.72 & 0.69 & 0.71 & 0.17
      \\
                                                                          & Logistic 3 Courses & 0.63 & 0.5 & 0.38 & 0.43 & 0.32
      \\
-                                                                         & KMeans Full Set & 0.73 & 0.58 & 0.96 & 0.72 & 0.04
+                                                                         & K-means Full Set & 0.73 & 0.58 & 0.96 & 0.72 & 0.04
      \\
-                                                                         & KMeans 3 Courses & 0.73 & 0.58 & 0.96 & 0.72 & 0.04
-    
+                                                                         & K-means 3 Courses & 0.73 & 0.58 & 0.96 & 0.72 & 0.04
+
 \end{tabular}}
+
 \caption{Accuracy, Precision, Recall, F1 Scores, and the False Omission Rate}~\label{tab:scoresTable}
 
 \end{table}
 
 We expected that a predictive model trained on the full feature set of course grades would be more effective than a model using cluster labels from unsupervised clustering. To test this hypothesis, we compared the performance of a logistic regression classifier trained on the full feature set to the performance of a classifier that used co-membership information from the clusters on a classification task: to predict whether the student had in fact graduated with that major. The cluster-based classifier estimated the probability that a student belonged to a particular category using the fraction of co-clustered samples that also belonged to the category of interest.
 
-In each case we identified strongly predictive clusters. Though outperformed, the cluster-based classifiers compared surprisingly well with the logistic regression models (see figure \ref{tab:rocTable}). Heuristically speaking, students in the same cluster tended to drop out at the same times after getting the same grades in the same courses. 
+In each case we identified strongly predictive clusters. Though outperformed, the cluster-based classifiers compared surprisingly well with the logistic regression models (see Table \ref{tab:rocTable}). Heuristically speaking, students in the same cluster tended to drop out at the same times after getting the same grades in the same courses. 
 
 \begin{table}[ht]
  \begin{center}
@@ -266,7 +259,7 @@ In each case we identified strongly predictive clusters. Though outperformed, th
 
 \section{DISCUSSION}
 
-Cluster analysis can also help to identify common traits among students within each cluster. For each department the second cluster spends on average four semesters enrolled with that major declared (\ref{tab:boxplotTable}). However the probability of these students graduating with the major is quite low (see table \ref{tab:scoresTable}).
+Cluster analysis can also help to identify common traits among students within each cluster. For each department the second cluster spends on average four semesters enrolled with that major declared (Table \ref{tab:boxplotTable}). However the probability of these students graduating with the major is quite low (Table \ref{tab:scoresTable}).
 Note that precision in this case is equal to a student’s probability of graduating given that they are in cluster 1, and the false omission rate is equal to a student’s probability of graduating given that they are in cluster 2.
 
 \begin{table}[h!]
@@ -289,7 +282,7 @@ Note that precision in this case is equal to a student’s probability of gradua
  \caption{PCA plots with course vector labels}~\label{tab:pcaTable}
 \end{table}
 
-Principal component analysis (PCA) plots were used to investigate course contribution to cluster variation for each major. The PCA plots (\ref{tab:pcaTable}) determine the orthonormal directions of maximum variance in each dataset. The student grades are projected onto the first and second principal components, and the red and blue colors mark the clusters as determined by the K-Means algorithm. The management and marketing majors show more spatially separated clusters than those of economics and business law. 
+Principal component analysis (PCA) plots were used to investigate course contribution to cluster variation for each major. The PCA plots (Table \ref{tab:pcaTable}) determine the orthonormal directions of maximum variance in each dataset. The student grades are projected onto the first and second principal components, and the red and blue colors mark the clusters as determined by the K-Means algorithm. The Management and Marketing majors show more spatially separated clusters than those of Economics and Business Law. 
 
 A few course vectors are also shown; and here we see that, across majors, the ENGL205 and SOM120 vectors lie parallel  to the axis of separation between the two clusters, so these courses do not contribute meaningfully to cluster separation. Conversely, the class vectors (such as ACCT230) that lie perpendicular to the axis of separation contribute the most to cluster separation. Interestingly, there are courses (such as MATH150A) that play this role amongst several different majors. While these courses may not raise flags in any particular department, the fact that they are disproportionately driving student attrition rates should be of concern. We suggest that reforming, or at the very least investigating, these ‘hidden bottleneck’ courses may be crucial to understanding student attrition at large.
 
