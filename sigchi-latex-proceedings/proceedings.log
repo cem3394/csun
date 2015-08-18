@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 AUG 2015 10:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 AUG 2015 10:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1148,6 +1148,10 @@ Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 315.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 315.
 Package rerunfilecheck Info: File `proceedings.out' has not changed.
 (rerunfilecheck)             Checksum: FD88F4BA10C859AB5C2B1A0118ECB120;582.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 315.
  ) 
 Here is how much of TeX's memory you used:
@@ -1192,7 +1196,7 @@ live/2013/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/local/texlive/20
 onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on proceedings.pdf (4 pages, 464149 bytes).
+Output written on proceedings.pdf (4 pages, 464189 bytes).
 PDF statistics:
  185 PDF objects out of 1000 (max. 8388607)
  149 compressed objects within 2 object streams
